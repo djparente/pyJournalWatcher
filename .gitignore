@@ -1,9 +1,8 @@
-__pycache__/**
+**/__pycache__/**
 .CACHE_OPENAI/**
 .idea/*
 bak/**
 pubmed-api.log
-pymed/__pycache__/**
 config.toml
 lastguiconf.toml
 queries/**

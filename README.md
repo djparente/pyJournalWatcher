@@ -44,7 +44,7 @@ Once inside the venv:
 
 Once inside the venv, run the program as follows:
 
-    python -m pyjournalwatcher
+    python pyjournalwatcher/main.py
 
 ## Citation
 This project is currently under peer review. If for some reason you need to cite it in the interim, please contact me at dparente@kumc.edu.
