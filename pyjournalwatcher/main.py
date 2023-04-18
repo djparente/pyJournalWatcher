@@ -1,7 +1,7 @@
 # Daniel J. Parente, MD PhD
 # University of Kansas Medical Center
 
-import oai
+from oai import summary_from_cache_or_create
 from pymed import PubMed
 from docx import Document
 from docx.shared import Pt, Inches, RGBColor
@@ -12,7 +12,7 @@ import markdown
 from gooey import Gooey, GooeyParser
 import toml
 from configuration import config
-import globalconf
+from globalconf import globalconf
 import os
 
 # Set up logging
@@ -175,7 +175,7 @@ def executeMain(conf):
             if len(abstract_plain) > globalconf.OAI_LOWER_THRESHOLD:
                 # Send a call to summarize this article (or pull it from a cache of prior abstracts
                 # (the ache pull is based on article_id, not the abstract text)
-                oai_summary = oai.summary_from_cache_or_create(
+                oai_summary = summary_from_cache_or_create(
                     article_id,
                     abstract_plain,
                     conf.API_KEY,
@@ -477,6 +477,9 @@ def main():
     conf.to_toml(lastguiconf_path)
     executeMain(conf)
 
+
+def debug():
+    print('yes')
 
 if __name__ == "__main__":
     main()

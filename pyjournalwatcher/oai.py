@@ -1,5 +1,5 @@
 import os.path
-import globalconf
+from globalconf import globalconf
 import openai
 from datetime import datetime
 import time
