@@ -5,8 +5,8 @@ gooey_root = os.path.dirname(gooey.__file__)
 
 block_cipher = None
 
-a = Analysis(['pyjournalwatcher/main.py'],  # replace me with your path
-             pathex=['pyjournalwatcher/pyjournalwatcher/main.py'],
+a = Analysis(['src/main.py'],  # replace me with your path
+             pathex=['src/main.py'],
              binaries=[],
              datas=[],
              hiddenimports=[],
