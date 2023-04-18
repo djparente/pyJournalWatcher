@@ -8,7 +8,6 @@ lastguiconf.toml
 queries/**
 dist/**
 build/**
-*.spec
 ToReview/*
 secrets.py
 processed_pmids.txt
