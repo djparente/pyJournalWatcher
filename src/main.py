@@ -308,7 +308,7 @@ def executeMain(conf):
 @Gooey(
     program_name='pyJournalWatch',       # Defaults to script name
     program_description='Rapid and systematic surveillance of the biomedical literature augmented by artificial intelligence',       # Defaults to ArgParse Description
-    default_size=(1100, 1024),   # starting size of the GUI
+    default_size=(900, 1000),   # starting size of the GUI
     required_cols=1,           # number of columns in the "Required" section
     optional_cols=2,           # number of columns in the "Optional" section
     dump_build_config=False,   # Dump the JSON Gooey uses to configure itself
@@ -369,7 +369,11 @@ def main():
                                metavar="Output Directory",
                                gooey_options={'initial_value': default_basedir},
                                help="Directory to store output files, backup and GPT cache")
-    basic_options.add_argument('--model', choices=['gpt-3.5-turbo', 'gpt-4'], default='gpt-3.5-turbo')
+    basic_options.add_argument('--model',
+                               choices=['gpt-3.5-turbo', 'gpt-4'],
+                               default='gpt-3.5-turbo',
+                               help="Select GPT-3.5 or GPT-4 model to use",
+                               metavar="GPT model")
 
     journal_group = parser.add_argument_group(
         "Common Journals",
